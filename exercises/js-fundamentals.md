@@ -99,3 +99,42 @@ loginUser("john@gmail.com", "wrongpassword");
 after successful login.
 
 ---
+
+## Solution:
+
+let users = [
+{
+email: "john@gmail.com",
+password: "12345",
+},
+{
+email: "mary@gmail.com",
+password: "password",
+},
+{
+email: "admin@gmail.com",
+password: "admin123",
+},
+];
+
+// function definition
+function loginUser(email, password){
+// const oneuser = users.find(u=>u.email === email)
+// const onepassword = users.find(p=>p.password === password)
+// if(email === user.email && password === user.password){
+// console.log("Successfully logged in")
+// }
+// else {
+// console.log("Login failed")
+// }
+users.find(user=>user.email === email && user.password === password)
+if(!users){
+console.log("login successful")
+}
+else {
+console.log("login failed")
+}
+}
+
+// calling the function
+loginUser( "john@gmail.com", "1234")
